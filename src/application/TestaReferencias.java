@@ -1,6 +1,6 @@
 package application;
 
-import entities.ContaCaelum;
+import entities.Conta_caelum;
 
 public class TestaReferencias {
 
@@ -18,11 +18,11 @@ public class TestaReferencias {
 
 		}*/
 		
-		ContaCaelum c1 = new ContaCaelum();
+		Conta_caelum c1 = new Conta_caelum();
 		
 		c1.deposita(100);
 		
-		ContaCaelum c2 = c1;
+		Conta_caelum c2 = c1;
 		c2.deposita(200);
 		
 		System.out.println(c1.saldo);
