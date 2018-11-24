@@ -1,20 +1,23 @@
 package application;
 
-import entities.Porta;
+import entities.Casa;
 
 public class PraticandoOO {
 
 	public static void main(String[] args) {
 		
-		Porta porta = new Porta();
+		Casa casa = new Casa();
 		
-		porta.abre();
-		porta.fecha();
-		porta.pinta("Azul");
-		porta.aberta = false;
+		casa.porta1 = true;
+		casa.porta2 = true;
+		casa.porta3 = false;
 		
-		System.out.println(porta.cor);
-		porta.estaAberta();
+	casa.pinta("Verde");
+	
+	System.out.println(casa.cor);
+	System.out.printf("O número de portas abertas é: %d",casa.quantasPortasEstaoAbertas());
+	
+	
 
 	}
 
