@@ -1,7 +1,19 @@
 package entities;
 
 public class Cliente_caelum {
-	public String nome;
-	public String sobrenome;
-	public String cpf;
+	private String nome;
+	private String endereco;
+	private String cpf;
+	private int idade;
+	
+	public void mudaCPF(String cpf) {
+		if (idade <= 60) {
+		validaCPF(cpf);
+		}
+		this.cpf = cpf;
+	}
+	
+	private void validaCPF(String cpf) {
+		
+	}
 }

@@ -2,10 +2,11 @@ package entities;
 
 public class Conta_caelum {
 	public int numero;
-	public String titular;
+	private String titular;
 	public String agencia;
-	public double saldo;
+	private double saldo;
 	public Data_caelum dataAbertura;
+	private double limite;
 
 
 	//==========Método saca padrão============
@@ -15,8 +16,13 @@ public class Conta_caelum {
 	  }
 
 	//==========Método que deposita uma quantidade na conta==============
-	public void deposita(double quantidade) {                
+	public void deposita(double quantidade) {  
+		if (quantidade <= 0) {
+			System.out.println("Você não pode depositar esse valor!");
+		}
+		else {
 		this.saldo += quantidade;
+		}
 	}
 	
 	//==========Método que calcula o rendimento da conta==============
@@ -34,9 +40,25 @@ public class Conta_caelum {
 		dados += "\nData de Abertura: " + this.dataAbertura;
 		return dados;
 	}
+	
+// ==============================GETTERS AND SETTERS==================================	
+	
+	public double getSaldo() {
+		return this.saldo;
+	}
+	
+	public String getTitular() {
+		return this.titular + this.limite;
+	}
+	
+	public void setTitular(String titular) {
+		this.titular = titular;
+	}
+	
+// ===================================================================================	
 
-/*	
-	public boolean saca(double valor) {                       // Médoto saca que retorna boolean
+/*	============Médoto saca que retorna boolean==========
+	public boolean saca(double valor) {                       
 		if (this.saldo < valor) {
 			return false;
 		} else {
@@ -46,15 +68,15 @@ public class Conta_caelum {
 	}
 */	
 
-/*
-	public void transfere(ContaCaelum destino, double valor) {          //Método que transfere padrão
+/* =============Método que transfere padrão==========
+	public void transfere(ContaCaelum destino, double valor) {          
 		this.saldo = this.saldo - valor;
 		destino.saldo = destino.saldo + valor;
 	}
 */
 	
-/*	
-	public boolean transferePara(Conta_caelum destino, double valor) {     //Método que transfere com validação
+/*	===========Método que transfere com validação==========
+	public boolean transferePara(Conta_caelum destino, double valor) {     
 		boolean retirou = this.saca(valor);
 		if (retirou == false) {
 			System.out.println("Você não tem saldo suficiente!");

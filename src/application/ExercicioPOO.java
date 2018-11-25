@@ -9,15 +9,11 @@ public class ExercicioPOO {
 		
 	
 		Conta_caelum c1 = new Conta_caelum();
-		c1.titular = "Danilo";
-		c1.saldo = 100;
-		Data_caelum data = new Data_caelum();
-		data.dia = 19;
-		data.mes = 11;
-		data.ano = 1992;
-		c1.dataAbertura = data;
 		
-		System.out.println(c1.recuperaDadosParaImpressao());
+		c1.deposita(-1000);
+
+		
+		System.out.println(c1.getSaldo());
 		
 		
 	}		

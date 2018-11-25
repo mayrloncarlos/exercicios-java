@@ -25,8 +25,8 @@ public class TestaReferencias {
 		Conta_caelum c2 = c1;
 		c2.deposita(200);
 		
-		System.out.println(c1.saldo);
-		System.out.println(c2.saldo);
+		System.out.println();
+		System.out.println();
 
 	}
 }
