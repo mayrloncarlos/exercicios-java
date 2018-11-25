@@ -7,14 +7,9 @@ public class ExercicioPOO {
 
 	public static void main(String[] args) {
 		
-	
-		Conta_caelum c1 = new Conta_caelum();
+	String titular = "Carlos";
+	Conta_caelum c1 = new Conta_caelum(titular);
 		
-		c1.deposita(-1000);
-
-		
-		System.out.println(c1.getSaldo());
-		
-		
+	System.out.println(c1.getTitular());
 	}		
 }

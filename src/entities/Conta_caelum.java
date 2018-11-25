@@ -7,6 +7,45 @@ public class Conta_caelum {
 	private double saldo;
 	public Data_caelum dataAbertura;
 	private double limite;
+	private static int totalDeContas;
+
+	
+    // ==============================CONSTRUCTORS=========================================
+	
+	/*public Conta_caelum() {
+		Conta_caelum.totalDeContas += 1;
+	}*/
+	
+	public static int getTotalDeContas() {
+		return Conta_caelum.totalDeContas;
+	}
+	
+	public Conta_caelum(String titular) {
+		this.titular = titular;
+	}
+	
+	public Conta_caelum() {
+		
+	}
+
+	// ==============================GETTERS AND SETTERS==================================	
+	
+		public double getSaldo() {
+			return this.saldo;
+		}
+		
+		public String getTitular() {
+			return this.titular + this.limite;
+		}
+		
+		public void setTitular(String titular) {
+			this.titular = titular;
+		}
+		
+		public void getRendimento() {
+			double rendimento = this.saldo * 0.1;
+			this.saldo = rendimento;
+		}
 
 
 	//==========Método saca padrão============
@@ -24,13 +63,7 @@ public class Conta_caelum {
 		this.saldo += quantidade;
 		}
 	}
-	
-	//==========Método que calcula o rendimento da conta==============
-	public void calculaRendimento() {
-		double rendimento = this.saldo * 0.1;
-		this.saldo = rendimento;
-	}
-	
+		
 	//==========Método que mostra na tela todos os dados da conta==============
 	public String recuperaDadosParaImpressao() {
 		String dados = "Titular: " + this.titular;
@@ -41,21 +74,6 @@ public class Conta_caelum {
 		return dados;
 	}
 	
-// ==============================GETTERS AND SETTERS==================================	
-	
-	public double getSaldo() {
-		return this.saldo;
-	}
-	
-	public String getTitular() {
-		return this.titular + this.limite;
-	}
-	
-	public void setTitular(String titular) {
-		this.titular = titular;
-	}
-	
-// ===================================================================================	
 
 /*	============Médoto saca que retorna boolean==========
 	public boolean saca(double valor) {                       
