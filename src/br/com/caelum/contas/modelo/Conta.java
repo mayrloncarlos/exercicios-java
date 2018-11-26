@@ -1,11 +1,11 @@
-package entities;
+package br.com.caelum.contas.modelo;
 
-public class Conta_caelum {
+public class Conta {
 	public int numero;
 	private String titular;
 	public String agencia;
 	private double saldo;
-	public Data_caelum dataAbertura;
+	public Data dataAbertura;
 	private double limite;
 	private static int totalDeContas;
 
@@ -17,14 +17,14 @@ public class Conta_caelum {
 	}*/
 	
 	public static int getTotalDeContas() {
-		return Conta_caelum.totalDeContas;
+		return Conta.totalDeContas;
 	}
 	
-	public Conta_caelum(String titular) {
+	public Conta(String titular) {
 		this.titular = titular;
 	}
 	
-	public Conta_caelum() {
+	public Conta() {
 		
 	}
 

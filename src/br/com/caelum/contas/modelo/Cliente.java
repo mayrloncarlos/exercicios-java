@@ -1,6 +1,6 @@
-package entities;
+package br.com.caelum.contas.modelo;
 
-public class Cliente_caelum {
+public class Cliente {
 	private String nome;
 	private String endereco;
 	private String cpf;
