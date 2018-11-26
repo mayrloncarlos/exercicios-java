@@ -1,15 +1,34 @@
 package application;
 
-import entities.Conta_caelum;
-import entities.Data_caelum;
+import java.util.Scanner;
 
 public class ExercicioPOO {
 
 	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
 		
-	String titular = "Carlos";
-	Conta_caelum c1 = new Conta_caelum(titular);
+		int[] list = new int[5];
 		
-	System.out.println(c1.getTitular());
-	}		
+		list[0] = 15;
+		list[1] = 8;
+		list[2] = 7;
+		list[3] = 22;
+		list[4] = 11;
+		
+		/*for(int i = 0; i<list.length;i++) {
+			if (list[i] >= 10) {
+				list[i] = list[i];
+				System.out.println(list[i] + " É maior que 10");
+			}
+			
+		}*/
+		
+		for(int valor: list) {
+			if (valor >= 10) {
+				System.out.println(valor + " É maior que 10");
+			}
+		}
+	}
 }
+
